@@ -1,3 +1,4 @@
+/*library that handles with every variable and function related to the game maintenance routines*/
 #ifndef SET_H
 #define SET_H
 #include<stdio.h>
@@ -37,8 +38,8 @@ struct t_game
 	int score;
 	int lines;
 	int columns;
-	int time;
-	int time_aux;
+	int total_time;
+	int round_time;
 	int alien_speed;
 	int speed_aux;
 	int alien_direction;
@@ -47,7 +48,7 @@ typedef struct t_game t_game;
 
 /*initialize ncurses library, their functions and the t_game's variables.*/
 int initial_set(t_list *ship, t_list *aliens, t_list *shoot, t_list
-*lasers, t_list *fortress, t_list *mother, t_game *game;
+*lasers, t_list *fortress, t_list *mother, t_game *game);
 
 /*does the game maintenance routines based on the state it is in*/
 void control_game_state(t_list *ship, t_list *aliens, t_list *fortress, t_game *game);
