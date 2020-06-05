@@ -9,7 +9,7 @@
 #include"set.h"
 
 /*print the game's edge*/
-void print_edge(int lines, int columns);
+void print_edges(int lines, int columns);
 
 /*print the control's varibles of the game*/
 void print_game_variables(t_list *aliens, t_game *game);
@@ -18,7 +18,7 @@ void print_game_variables(t_list *aliens, t_game *game);
 char *sprites(t_list *l);
 
 /*change the current element's frame*/
-void change_frame(t_list *l);
+void swap_frame(t_list *l);
 
 /*prints a element*/
 void print_element(t_list *l);
