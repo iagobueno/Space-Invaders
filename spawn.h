@@ -6,7 +6,7 @@
 #include"set.h"
 
 /*inserts several elements of the same type in a single list*/
-void fill_list(int type, int amount, t_list *l);
+void inserts_elements_list(int type, int amount, t_list *l);
 
 /*spawn the ship*/
 void spawn_ship(t_list *ship);

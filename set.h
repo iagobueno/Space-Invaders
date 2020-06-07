@@ -10,6 +10,7 @@
 #define STARTING 'A'
 #define GAMING 'B'
 #define GAMEOVER 'C'
+#define STOP 'D'
 #define BONUS 'E'
 #define LINES 38
 #define COLUMNS 110
