@@ -73,9 +73,11 @@ void move_elements_list(pair axis, t_list *l){
 
 	initializes_current_beginning(l);
 
-	int i;
+	int i, state;
 	for(i=0;i<size;i++){
-		change_axis(axis, l);
+		current_state(&state, l);
+		if(state != 'D')
+			change_axis(axis, l);
 		increases_current(l);
 	}
 }
@@ -104,7 +106,7 @@ void joypad(char *state, t_list *ship, t_list *shoot, t_game *game){
 		size=list_size(shoot);
 		if(size < 3){
 			inserts_structure(SHOOT, shoot);
-			initializes_current_beginning(shoot);
+			initializes_current_end(shoot);
 
 			pair axis;
 			current_axis(&axis, ship);
