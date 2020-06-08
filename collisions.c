@@ -88,12 +88,12 @@ void check_elements_collisions(int amount, t_list *l, t_list *m, t_game *game){
 			control=0;
 			int state;
 			current_state(&state, m);
-			if(state == 'D'){
+			if(state != 'D'){
 
 				/*gettint second axis and dimension*/
 				pair axis_2, dim_2;
-				current_axis(&axis_2, l);
-				current_dimension(&dim_2, l);
+				current_axis(&axis_2, m);
+				current_dimension(&dim_2, m);
 
 				/*the code below basically says: if collides, treat collision*/
 
