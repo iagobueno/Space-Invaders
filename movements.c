@@ -92,6 +92,7 @@ void joypad(char *state, t_list *ship, t_list *shoot, t_game *game){
 	if(key == KEY_LEFT && axis.y > 1 ){
 		axis.x=0;
 		axis.y=-1;
+		move_elements_list(axis, ship);
 	}
 	else if(key == KEY_RIGHT && axis.y < 95){
 		axis.x=0;
