@@ -32,7 +32,7 @@ void elements_collisions(t_list *l, t_game *game){
 
 	if(type == SHIP){
 		change_frame('D',l);
-		game->status=GAMEOVER;
+		game->status=GAME_OVER;
 	}
 	else if(type == ALIEN_1){
 		game->score+=30;
@@ -63,7 +63,7 @@ void edges_collisions(t_list *l, t_game *game){
 	int type;
 	current_type(&type, l);
 	if(type == ALIEN_1 || type == ALIEN_2 || type == ALIEN_3)
-		game->status=GAMEOVER;
+		game->status=GAME_OVER;
 	else
 		removes_current_knot(l);
 }
@@ -173,5 +173,7 @@ void collisions(t_list *ship, t_list *aliens, t_list *shoot, t_list
 	check_edges_collisions(BOTTOM, 37, lasers, game);
 	check_edges_collisions(RIGHT, 99, mother, game);
 	check_edges_collisions(BOTTOM, 35, aliens, game);
+	removes_exploding_elements(aliens, game);
+	removes_exploding_elements(mother, game);
 }
 

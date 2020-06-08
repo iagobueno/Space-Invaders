@@ -1,7 +1,7 @@
 #include"print.h"
 
 /*print the game's edge*/
-void print_edge(int lines, int columns){
+void print_edges(int lines, int columns){
 	int i;
 	/*first and last lines*/
 	for(i = 0;i <= columns;i++){

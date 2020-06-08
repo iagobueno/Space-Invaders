@@ -9,7 +9,7 @@
 #include"attributes.h"
 #define STARTING 'A'
 #define GAMING 'B'
-#define GAMEOVER 'C'
+#define GAME_OVER 'C'
 #define STOP 'D'
 #define BONUS 'E'
 #define LINES 38
