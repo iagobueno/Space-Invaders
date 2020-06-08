@@ -106,8 +106,10 @@ void swap_frame(t_list *l){
 
 	if(frame == 'A')
 		change_frame('B', l);
-	else
+	else if(frame == 'B')
 		change_frame('A', l);
+	else
+		return;
 }
 
 /*prints a element*/

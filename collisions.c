@@ -162,6 +162,8 @@ void check_edges_collisions(int edge, int n, t_list *l, t_game *game){
 /*call every collision function*/
 void collisions(t_list *ship, t_list *aliens, t_list *shoot, t_list
 *lasers, t_list *fortress, t_list *mother, t_game *game){
+	removes_exploding_elements(aliens, game);
+	removes_exploding_elements(mother, game);
 	check_elements_collisions(2, shoot, aliens, game);
 	check_elements_collisions(2, shoot, fortress, game);
 	check_elements_collisions(2, shoot, mother, game);
@@ -173,7 +175,5 @@ void collisions(t_list *ship, t_list *aliens, t_list *shoot, t_list
 	check_edges_collisions(BOTTOM, 37, lasers, game);
 	check_edges_collisions(RIGHT, 99, mother, game);
 	check_edges_collisions(BOTTOM, 35, aliens, game);
-	removes_exploding_elements(aliens, game);
-	removes_exploding_elements(mother, game);
 }
 
