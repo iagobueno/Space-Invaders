@@ -8,7 +8,7 @@
 
 ##ncurses
 
-- To emulate a window, I used the ncurses library, as requested by the teacher. 
+- To emulate a window, I used the ncurses library, as requested by my teacher. 
 - So, to compile this project you'll need to install the ncurses library.
 
 #installing ncurses
@@ -28,6 +28,6 @@ uses this name.
 
 #executing the game
 
-	$ ./space_invaders
+	$ ./space_invaders.sh
 
 - thank all you guys, have fun!
