@@ -1,3 +1,5 @@
+Space Invaders in C
+
 ##space-invaders
 
 - I rebuilt the japanese shooting video game released in 1978, Space Invaders, as a College project.
